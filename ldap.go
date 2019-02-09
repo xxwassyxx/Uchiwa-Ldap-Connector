@@ -20,9 +20,7 @@ func LdapAuth(u, p string) (*authentication.User, error) {
     fn    string = ""
     email string = ""
     role authentication.Role
-    test *config.Ldap
   )
-  fmt.Println(test)
 
 
   tlsConfig := &tls.Config{InsecureSkipVerify: ls.Insecure}
