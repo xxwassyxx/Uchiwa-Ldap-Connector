@@ -97,5 +97,6 @@ func LdapAuth(u, p string) (*authentication.User, error) {
     }
   }
   fmt.Println("Successfully authenticated user", u)
+  fmt.Println("Datacenters assigned", role.Datacenters)
   return &authentication.User{ID: 0, Username: u, FullName: fn, Email: email, Role: authentication.Role{Name: role.Name,  Readonly: role.Readonly, Datacenters: role.Datacenters}}, nil
 }
