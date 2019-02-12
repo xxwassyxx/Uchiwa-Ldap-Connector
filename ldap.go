@@ -48,7 +48,7 @@ func LdapAuth(u, p string) (*authentication.User, error) {
     return &authentication.User{}, fmt.Errorf("unable to lookup user '%s' in ad", u)
   }
 
-  if len(sr.Entries) != 1 {
+  if len(sr.Entries) < 1 {
     return &authentication.User{}, fmt.Errorf("unable to find user '%s' in ad", u)
   }
 
