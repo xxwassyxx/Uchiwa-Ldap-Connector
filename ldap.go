@@ -90,7 +90,7 @@ func LdapAuth(u, p string) (*authentication.User, error) {
       if err != nil {
         return &authentication.User{}, fmt.Errorf("unable to find user '%s' in defined groups in ad", u)
       }
-      if len(gr.Entries) < 1 { break }
+      if len(gr.Entries) = 0 { break }
       role.Readonly = i.Readonly
       role.Name = i.Name
       role.Datacenters = i.Datacenters
